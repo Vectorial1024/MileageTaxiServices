@@ -37,5 +37,6 @@ idle fare: if mileage fare is 0, then collect fare as if DELTA_DISPLACEMENT is 1
 ```
 
 With this, at least +50% taxi income is guaranteed, provided that the taxi is carrying passengers.
+To further increase taxi income, consider using Ticket Price Customizer.
 
-Taxis without passengers do NOT generate any income.
+Taxis without passengers do NOT generate any income, just as usual.
