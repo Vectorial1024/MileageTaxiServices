@@ -39,6 +39,7 @@ namespace MileageTaxiServices
             }
             // has passenger
             // then simple: generate some money for it
+            Debug.Log($"Taxi vehicle ID: {vehicleID}; generating an income.");
 
             // calculate the instantaneous fare based on the distance travelled
             // if distance travelled is not enough, causing the fare to round to 0, then consider as idle fare
