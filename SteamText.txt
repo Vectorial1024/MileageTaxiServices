@@ -18,6 +18,7 @@ Taxis in Cities Skylines collect fares ONLY WHEN the passenger has arrived at th
 If for some reason the journey becomes invalid, then no fare is collected at all.
 
 The final fare collected is calculated only with the straight-line distance (aka displacement) of the journey, and the actual mileage is not considered.
+This service income is accounted as "taxi income".
 
 This does not look good at the budget screen.
 
