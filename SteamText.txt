@@ -1,0 +1,39 @@
+Simulate mileage-based taxi fares.
+
+[img]https://i.imgur.com/O3ujMsj.png[/img]
+
+[h1]Quick info[/h1]
+[list]
+[*]Requires Harmony
+[*]Greatly inspired by Profitable Tourism
+[*]I bet you all are misunderstanding taxis
+[*]Taxis generate mileage-based fare
+[*]Works with Ticket Price Customizer, Transport Lines Manager, and Profitable Tourism
+[/list]
+
+[h1]First, Explaining How Taxis Work[/h1]
+It seems there are a lot of misconceptions about how taxis work, which may explain why so many of us complain "it doesn't work" at Profitable Tourism.
+
+Taxis in Cities Skylines collect fares ONLY WHEN the passenger has arrived at the destination. During the journey, the taxi does not generate any income.
+If for some reason the journey becomes invalid, then no fare is collected at all.
+
+The final fare collected is calculated only with the straight-line distance (aka displacement) of the journey, and the actual mileage is not considered.
+
+This does not look good at the budget screen.
+
+[h1]Mod Effects[/h1]
+This mod is very simple: every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around half the standard rate.
+
+Thus, mileage-based fares are simulated. With this, at least +50% overall income from taxi services are guaranteed, with potentially more depending on your road layout.
+
+Moreover, you can now estimate live city-wide taxi usage simply by looking at your public transport budget tab.
+
+Note: you may stack e.g. Ticket Price Customizer with this mod. This may make taxis unbalanced, but you do you.
+
+[h1]GitHub Repo[/h1]
+This mod is open-sourced, and the repo is available here: https://github.com/Vectorial1024/MileageTaxiServices
+
+最後，歡迎各位加入香港Cities Skylines Discord群組：
+https://discord.gg/KeSDDydjSB
+
+And that's all!
