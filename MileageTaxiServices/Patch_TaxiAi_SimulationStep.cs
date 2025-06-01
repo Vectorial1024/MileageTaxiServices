@@ -42,10 +42,13 @@ namespace MileageTaxiServices
             // Debug.Log($"Taxi vehicle ID: {vehicleID}; generating an income.");
 
             // calculate the instantaneous fare based on the distance travelled
-            // if distance travelled is not enough, causing the fare to round to 0, then consider as idle fare
+            // we use "incremental pay-in-advance" as per usual incremental fare schemes IRL
+            // this means idling (i.e. not enough distance travelled) also generates a little bit of fare
             // this allows maximum compatibility with other fare-scaling mods
-            var instantFare = (int) Math.Round(__instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiFareRate);
-            Singleton<EconomyManager>.instance.AddResource(EconomyManager.Resource.PublicIncome, instantFare < 0 ? 1 : instantFare, __instance.m_info.m_class);
+            // note to fellow programmers: if rounding up of non-negative numbers is needed, then can simply use (int)x + ((int)(x%1 - 1) + 1)
+            var standardInstantFare = __instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiFareRate;
+            var instantFare = (int)standardInstantFare + 1;
+            Singleton<EconomyManager>.instance.AddResource(EconomyManager.Resource.PublicIncome, instantFare, __instance.m_info.m_class);
         }
 
         private static double DetermineDelta(ref Vehicle vehicleData)
