@@ -24,6 +24,7 @@ This does not look good at the budget screen.
 
 [h1]Mod Effects[/h1]
 This mod is very simple: every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around half the standard rate.
+The usual end-of-journey fare is unchanged. 
 
 Thus, mileage-based fares are simulated. With this, at least +50% overall income from taxi services are guaranteed, with potentially more depending on your road layout.
 
