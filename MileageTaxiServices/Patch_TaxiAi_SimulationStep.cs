@@ -12,7 +12,10 @@ namespace MileageTaxiServices
     [UsedImplicitly]
     public class Patch_TaxiAi_SimulationStep
     {
-        private const double TaxiFareRate = 1.0 / 2000.0;
+        /// <summary>
+        /// Equals to 1/2000, which is half of the standard "journey displacement" fare rate
+        /// </summary>
+        private const double TaxiMileageFareRate = 1.0 / 2000.0;
 
         [UsedImplicitly]
         public static MethodBase TargetMethod()
@@ -46,7 +49,7 @@ namespace MileageTaxiServices
             // this means idling (i.e. not enough distance travelled) also generates a little bit of fare
             // this allows maximum compatibility with other fare-scaling mods
             // note to fellow programmers: if rounding up of non-negative numbers is needed, then can simply use (int)x + ((int)(x%1 - 1) + 1)
-            var standardInstantFare = __instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiFareRate;
+            var standardInstantFare = __instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiMileageFareRate;
             var instantFare = (int)standardInstantFare + 1;
             Singleton<EconomyManager>.instance.AddResource(EconomyManager.Resource.PublicIncome, instantFare, __instance.m_info.m_class);
         }
