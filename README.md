@@ -10,6 +10,7 @@ The taxi fares are also very simple, only taking account into the straight-line 
 This mod aims to change that.
 
 ## Mod Status
+- Requires After Dark DLC (duh)
 - Requires Harmony
 - Compatible with:
   - Ticket Price Customizer

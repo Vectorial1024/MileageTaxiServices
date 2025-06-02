@@ -4,6 +4,7 @@ Simulate mileage-based taxi fares.
 
 [h1]Quick Info[/h1]
 [list]
+[*]Requires After Dark DLC (duh)
 [*]Requires Harmony
 [*]Greatly inspired by Profitable Tourism
 [*]I bet you all are misunderstanding vanilla taxis
