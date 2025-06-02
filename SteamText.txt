@@ -6,8 +6,8 @@ Simulate mileage-based taxi fares.
 [list]
 [*]Requires Harmony
 [*]Greatly inspired by Profitable Tourism
-[*]I bet you all are misunderstanding taxis
-[*]Taxis generate mileage-based fare
+[*]I bet you all are misunderstanding vanilla taxis
+[*]With this mod, taxis generate mileage-based fare
 [*]Works with Ticket Price Customizer, Transport Lines Manager, and Profitable Tourism
 [/list]
 
