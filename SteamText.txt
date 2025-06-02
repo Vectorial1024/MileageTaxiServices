@@ -2,7 +2,7 @@ Simulate mileage-based taxi fares.
 
 [img]https://i.imgur.com/O3ujMsj.png[/img]
 
-[h1]Quick info[/h1]
+[h1]Quick Info[/h1]
 [list]
 [*]Requires Harmony
 [*]Greatly inspired by Profitable Tourism
