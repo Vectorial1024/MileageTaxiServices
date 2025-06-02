@@ -14,17 +14,14 @@ Simulate mileage-based taxi fares.
 [h1]First, Explaining How Taxis Work[/h1]
 It seems there are a lot of misconceptions about how taxis work, which may explain why so many of us complain "it doesn't work" at Profitable Tourism.
 
-Taxis in Cities Skylines collect fares ONLY WHEN the passenger has arrived at the destination. During the journey, the taxi does not generate any income.
-If for some reason the journey becomes invalid, then no fare is collected at all.
+Taxis in Cities Skylines collect fares ONLY WHEN the passenger has arrived at the destination. During the journey, the taxi does not generate any income. If for some reason the journey becomes invalid, then no fare is collected at all.
 
-The final fare collected is calculated only with the straight-line distance (aka displacement) of the journey, and the actual mileage is not considered.
-This service income is accounted as "taxi income".
+The final fare collected is calculated only with the straight-line distance (aka displacement) of the journey, and the actual mileage is not considered. This service income is accounted as "taxi income".
 
 This does not look good at the budget screen.
 
 [h1]Mod Effects[/h1]
-This mod is very simple: every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around half the standard rate.
-The usual end-of-journey fare is unchanged. 
+This mod is very simple: every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around half the standard rate. The usual end-of-journey fare is unchanged. 
 
 Thus, mileage-based fares are simulated. With this, at least +50% overall income from taxi services are guaranteed, with potentially more depending on your road layout.
 
