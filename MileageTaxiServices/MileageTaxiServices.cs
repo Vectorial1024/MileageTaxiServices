@@ -70,5 +70,20 @@ namespace MileageTaxiServices
                 // so this block will have to be empty.
             }
         }
+
+        #region Taxi Config
+
+        public const float VanillaTaxiFareRate = 1 / 1000f;
+
+        public static int GetTaxiBaseMileage()
+        {
+            // the base mileage of taxi to be used for fare calculation; total fare = base mileage fare + rolling mileage fare
+            // the unit is the in-game meter.
+            // the taxi ticket price describes the fare per 1000 in-game meters.
+            // override/patch this to control how much bases mileage should be granted to taxis.
+            return 500;
+        }
+
+        #endregion
     }
 }
