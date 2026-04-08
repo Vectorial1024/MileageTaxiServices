@@ -13,9 +13,9 @@ namespace MileageTaxiServices
     public class Patch_TaxiAi_SimulationStep
     {
         /// <summary>
-        /// Equals to 1/2000, which is half of the standard "journey displacement" fare rate
+        /// Equals to 1/1000, which is equal the standard "journey displacement" fare rate
         /// </summary>
-        private const double TaxiMileageFareRate = 1.0 / 2000.0;
+        private const double TaxiMileageFareRate = 1.0 / 1000.0;
 
         [UsedImplicitly]
         public static MethodBase TargetMethod()
