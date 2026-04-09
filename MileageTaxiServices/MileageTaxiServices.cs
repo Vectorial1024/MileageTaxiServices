@@ -84,6 +84,13 @@ namespace MileageTaxiServices
             return 500;
         }
 
+        public static float GetTaxiMileageFactor()
+        {
+            // the mileage multiplier of the taxi during mileage fare calculation
+            // override/patch this to control how strong the mileage should affect the taxi fare.
+            return 1;
+        }
+
         #endregion
     }
 }
