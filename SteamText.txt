@@ -22,9 +22,9 @@ The final fare collected is calculated only with the straight-line distance (aka
 This does not look good at the budget screen.
 
 [h1]Mod Effects[/h1]
-This mod is very simple: every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around half the standard rate. The usual end-of-journey fare is unchanged. 
+This mod is very simple. Instead of the confusing end-of-journey fare, every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around the same rate as the standard rate.
 
-Thus, mileage-based fares are simulated. With this, at least +50% overall income from taxi services are guaranteed, with potentially more depending on your road layout.
+Thus, mileage-based fares are simulated. With this, you are guaranteed to earn more taxi income than vanilla, with potentially more depending on your road layout.
 
 Moreover, you can now estimate live city-wide taxi usage simply by looking at your public transport budget tab.
 

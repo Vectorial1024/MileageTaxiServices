@@ -29,15 +29,16 @@ This does not take into account the actual mileage traveled. (In defense of CO: 
 
 This also means taxis generally do not really "turn a profit".
 
-This mod introduces mileage-based fare on top of the above fare:
+This mod replaces the above fare with a mileage-based fare, at almost the same rate:
 
 ```
-During journey with passenger, also calculate:
-mileage fare: DELTA_DISPLACEMENT * 1/2000 * STANDARD_FARE
+During journey with passenger, calculate:
+mileage fare: DELTA_DISPLACEMENT * 1/1000 * STANDARD_FARE
 idle fare: if mileage fare is 0, then collect fare as if DELTA_DISPLACEMENT is 1
+No longer collects end-of-journey fare.
 ```
 
-With this, at least +50% taxi income is guaranteed, provided that the taxi is carrying passengers.
+With this, the total fare is guaranteed to be higher than the vanilla fare, provided that the taxi is carrying passengers.
 To further increase taxi income, consider using Ticket Price Customizer.
 
 Taxis without passengers do NOT generate any income, just as usual.
