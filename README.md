@@ -22,7 +22,7 @@ As mentioned above, the taxi fares in Cities Skylines are very simple, too simpl
 
 ```
 On arrival, calculate:
-fare: DISPLACEMENT * 1/1000 * STANDARD_FARE
+fare: DISPLACEMENT * 1/1000 * STANDARD_FARE_RATE
 ```
 
 This does not take into account the actual mileage traveled. (In defense of CO: also tracking the actual mileage can be a performance problem!)
@@ -33,9 +33,9 @@ This mod replaces the above fare with a mileage-based fare, at almost the same r
 
 ```
 During journey with passenger, calculate:
-mileage fare: DELTA_DISPLACEMENT * 1/1000 * STANDARD_FARE
+mileage fare: DELTA_DISPLACEMENT * 1/1000 * STANDARD_FARE_RATE
 idle fare: if mileage fare is 0, then collect fare as if DELTA_DISPLACEMENT is 1
-No longer collects end-of-journey fare.
+At end-of-journey, collects base mileage fare equal to DELTA_DISPLACEMENT=500 (customizable by patching).
 ```
 
 With this, the total fare is guaranteed to be higher than the vanilla fare, provided that the taxi is carrying passengers.

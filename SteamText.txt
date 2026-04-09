@@ -22,7 +22,12 @@ The final fare collected is calculated only with the straight-line distance (aka
 This does not look good at the budget screen.
 
 [h1]Mod Effects[/h1]
-This mod is very simple. Instead of the confusing end-of-journey fare, every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around the same rate as the standard rate.
+This mod is very simple. Instead of the confusing end-of-journey fare, this mod splits taxi fares into two parts:
+
+[list]
+[*]Every tick when a taxi is carrying a passenger, it generates income based on its instantaneous mileage at around the same rate as the standard rate.
+[*]At end-of-journey, the taxi collects an additional fare as the "base mileage fare" (currently equal to 500 "in-game meters").
+[/list]
 
 Thus, mileage-based fares are simulated. With this, you are guaranteed to earn more taxi income than vanilla, with potentially more depending on your road layout.
 
