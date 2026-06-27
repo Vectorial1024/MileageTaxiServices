@@ -1,4 +1,5 @@
-﻿using CitiesHarmony.API;
+﻿using System.Collections.Generic;
+using CitiesHarmony.API;
 using ICities;
 
 namespace MileageTaxiServices
@@ -78,6 +79,16 @@ namespace MileageTaxiServices
             // override/patch this to control how strong the mileage should affect the taxi fare.
             return 1;
         }
+
+        #endregion
+
+        #region Error reporting
+
+        /// <summary>
+        /// The dictionary to track the taxis that have already reported issues.
+        /// <para>The idea is that, to prevent excessive interference, each taxi may only complain at most once.</para>
+        /// </summary>
+        internal static HashSet<ushort> ProblemTaxis = new HashSet<ushort>();
 
         #endregion
     }

@@ -51,7 +51,7 @@ namespace MileageTaxiServices
             // this allows maximum compatibility with other fare-scaling mods
             // note to fellow programmers: if rounding up of non-negative numbers is needed, then can simply use (int)x + ((int)(x%1 - 1) + 1)
             var standardInstantFare = __instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiMileageFareRate * MileageTaxiServices.GetTaxiMileageFactor();
-            if (standardInstantFare < 0)
+            if (standardInstantFare < 0 && !MileageTaxiServices.ProblemTaxis.Contains(vehicleID))
             {
                 // that's not supposed to happen. let's throw an exception.
                 var errorBuilder = new StringBuilder();
@@ -59,6 +59,7 @@ namespace MileageTaxiServices
                 errorBuilder.AppendLine("Extra debugging info:");
                 errorBuilder.AppendLine("Ticket price: " + __instance.m_transportInfo.m_ticketPrice);
                 errorBuilder.AppendLine("Distance delta: " + DetermineDelta(ref vehicleData));
+                MileageTaxiServices.ProblemTaxis.Add(vehicleID);
                 throw new Exception(errorBuilder.ToString());
             }
             Debug.LogError("Hi there!");

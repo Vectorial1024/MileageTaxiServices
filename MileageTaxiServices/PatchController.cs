@@ -21,6 +21,7 @@ namespace MileageTaxiServices
         public static void Activate()
         {
             GetHarmonyInstance().PatchAll(Assembly.GetExecutingAssembly());
+            MileageTaxiServices.ProblemTaxis.Clear();
         }
 
         public static void Deactivate()
