@@ -60,9 +60,8 @@ namespace MileageTaxiServices
                 errorBuilder.AppendLine("Ticket price: " + __instance.m_transportInfo.m_ticketPrice);
                 errorBuilder.AppendLine("Distance delta: " + DetermineDelta(ref vehicleData));
                 MileageTaxiServices.ProblemTaxis.Add(vehicleID);
-                throw new Exception(errorBuilder.ToString());
+                throw new StrangeTaxiFareException(errorBuilder.ToString());
             }
-            Debug.LogError("Hi there!");
             var instantFare = (int)standardInstantFare + 1;
             Singleton<EconomyManager>.instance.AddResource(EconomyManager.Resource.PublicIncome, instantFare, __instance.m_info.m_class);
         }

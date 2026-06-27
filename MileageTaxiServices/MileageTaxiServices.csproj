@@ -75,6 +75,7 @@
     <Compile Include="Patch_TaxiAi_UnloadPassengers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReversePatch_TaxiAi_GetPassengerInstance.cs" />
+    <Compile Include="StrangeTaxiFareException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
