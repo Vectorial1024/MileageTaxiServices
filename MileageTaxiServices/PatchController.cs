@@ -5,13 +5,7 @@ namespace MileageTaxiServices
 {
     internal class PatchController
     {
-        public static string HarmonyModID
-        {
-            get
-            {
-                return "com.vectorial1024.cities.mts";
-            }
-        }
+        public static string HarmonyModID => "com.vectorial1024.cities.mts";
 
         /*
          * The "singleton" design is pretty straight-forward.
@@ -21,12 +15,7 @@ namespace MileageTaxiServices
 
         public static Harmony GetHarmonyInstance()
         {
-            if (harmony == null)
-            {
-                harmony = new Harmony(HarmonyModID);
-            }
-
-            return harmony;
+            return harmony ?? (harmony = new Harmony(HarmonyModID));
         }
 
         public static void Activate()
