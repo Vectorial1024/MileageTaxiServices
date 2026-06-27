@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using System;
 using System.Reflection;
+using System.Text;
 using ColossalFramework;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -50,6 +51,17 @@ namespace MileageTaxiServices
             // this allows maximum compatibility with other fare-scaling mods
             // note to fellow programmers: if rounding up of non-negative numbers is needed, then can simply use (int)x + ((int)(x%1 - 1) + 1)
             var standardInstantFare = __instance.m_transportInfo.m_ticketPrice * DetermineDelta(ref vehicleData) * TaxiMileageFareRate * MileageTaxiServices.GetTaxiMileageFactor();
+            if (standardInstantFare < 0)
+            {
+                // that's not supposed to happen. let's throw an exception.
+                var errorBuilder = new StringBuilder();
+                errorBuilder.AppendLine("Taxi instantaneous fare is below 0, which is not allowed. Please send this to Vectorial1024 for further analysis.");
+                errorBuilder.AppendLine("Extra debugging info:");
+                errorBuilder.AppendLine("Ticket price: " + __instance.m_transportInfo.m_ticketPrice);
+                errorBuilder.AppendLine("Distance delta: " + DetermineDelta(ref vehicleData));
+                throw new Exception(errorBuilder.ToString());
+            }
+            Debug.LogError("Hi there!");
             var instantFare = (int)standardInstantFare + 1;
             Singleton<EconomyManager>.instance.AddResource(EconomyManager.Resource.PublicIncome, instantFare, __instance.m_info.m_class);
         }
