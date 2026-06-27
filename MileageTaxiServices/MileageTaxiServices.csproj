@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ModDestinationFolder>$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Addons\Mods\MileageTaxiServices</ModDestinationFolder>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModDestinationFolder)" />
+  </Target>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
