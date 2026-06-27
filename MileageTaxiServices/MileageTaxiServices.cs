@@ -5,21 +5,9 @@ namespace MileageTaxiServices
 {
     public class MileageTaxiServices : LoadingExtensionBase, IUserMod
     {
-        public virtual string Name
-        {
-            get
-            {
-                return "Mileage Taxi Services";
-            }
-        }
+        public virtual string Name => "Mileage Taxi Services";
 
-        public virtual string Description
-        {
-            get
-            {
-                return "Simulate distance-based taxi fares.";
-            }
-        }
+        public virtual string Description => "Simulate distance-based taxi fares.";
 
         /// <summary>
         /// Executed whenever a level completes its loading process.
